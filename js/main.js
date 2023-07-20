@@ -39,3 +39,8 @@ const userAge = document.getElementById("user-age");
 // DICHIARO I MIEI BOTTONI
 const sendText = document.getElementById("send-text");
 const removeText = document.getElementById("remove-text");
+
+// DICHIARO I MIEI OUTPUT
+const ticketName = document.getElementById("ticket-name");
+const ticketPrice = document.getElementById("ticket-price");
+const ticketDiscount = document.getElementById("ticket-discount");

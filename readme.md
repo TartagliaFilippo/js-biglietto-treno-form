@@ -46,7 +46,9 @@ Scrivere un programma che chieda all'utente:
 
 - inserico 2 bottoni
 
-  - uno che va a generare il costo del biglietto
+  - uno che "invia" gli input
   - uno "pulirà" gli input
 
-- inserisco una copia virtuale del biglietto dove vedo il prezzo effettivo del mio biglietto.
+- inserisco una copia virtuale del biglietto dove vedo il nome,prezzo e sconto effettivo del mio biglietto.
+
+- collego gli input con gli output
