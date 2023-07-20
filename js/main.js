@@ -1,8 +1,8 @@
 // RICHIESTE UTENTE
-const userAge = parseInt(prompt("inserisci la tua età"));
-const userKm = parseFloat(
-  prompt("inserisci il numero di kilometri che vuoi fare")
-);
+// const userAge = parseInt(prompt("inserisci la tua età"));
+// const userKm = parseFloat(
+//   prompt("inserisci il numero di kilometri che vuoi fare")
+// );
 
 // TARIFFARIO FISSO
 const priceKm = 0.21;
@@ -30,3 +30,8 @@ document.getElementById("final-ticket-price").innerHTML =
 // STAMPO A SCHERMO LO SCONTO DEL BIGLIETTO
 document.getElementById("ticket-discount").innerHTML =
   "Il sconto del biglietto è: €" + discountTicket.toFixed(2);
+
+// DICHIARO I MIEI INPUT
+const userName = document.getElementById("user-name");
+const userKm = document.getElementById("user-km");
+const userAge = document.getElementById("user-age");
