@@ -35,3 +35,7 @@ document.getElementById("ticket-discount").innerHTML =
 const userName = document.getElementById("user-name");
 const userKm = document.getElementById("user-km");
 const userAge = document.getElementById("user-age");
+
+// DICHIARO I MIEI BOTTONI
+const sendText = document.getElementById("send-text");
+const removeText = document.getElementById("remove-text");
