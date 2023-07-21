@@ -16,6 +16,7 @@ const ticketDiscount = document.getElementById("ticket-discount");
 buttonSend.addEventListener("click", function () {
   const inputName = userName.value;
   ticketName.innerHTML = inputName;
+  console.log(inputName);
 
   const inputKm = userKm.value;
 
