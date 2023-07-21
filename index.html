@@ -22,27 +22,39 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="card-body">
-          <h1 id="final-ticket-price"></h1>
-          <p id="ticket-discount"></p>
-        </div>
-      </div>
       <!-- CARD INPUT -->
       <div class="card" style="width: 18rem">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <input id="user-name" class="form-control" type="text" />
+            <label for="user-name">NAME</label>
+            <input
+              id="user-name"
+              class="form-control"
+              name="user-name"
+              type="text"
+            />
           </li>
           <li class="list-group-item">
-            <input id="user-km" class="form-control" type="text" />
+            <label for="user-km">KM</label>
+            <input
+              id="user-km"
+              class="form-control"
+              name="user-km"
+              type="text"
+            />
           </li>
           <li class="list-group-item">
-            <input id="user-age" class="form-control" type="text" />
+            <label for="user-age">AGE</label>
+            <input
+              id="user-age"
+              class="form-control"
+              name="user-age"
+              type="text"
+            />
           </li>
           <li class="list-group-item">
-            <button id="send-text" class="btn btn-success">Genera</button>
-            <button id="remove-text" class="btn btn-warning">Annulla</button>
+            <button id="buttom-send" class="btn btn-success">Genera</button>
+            <button id="button-remove" class="btn btn-warning">Annulla</button>
           </li>
         </ul>
         <!-- CARD OUTPUT -->
@@ -52,7 +64,7 @@
               <p id="ticket-name"></p>
             </div>
             <div>
-              <p id="ticket-price"></p>
+              <p id="final-ticket-price"></p>
             </div>
             <div>
               <p id="ticket-discount"></p>

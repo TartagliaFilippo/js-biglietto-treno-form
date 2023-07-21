@@ -1,8 +1,16 @@
 // RICHIESTE UTENTE
-// const userAge = parseInt(prompt("inserisci la tua età"));
-// const userKm = parseFloat(
-//   prompt("inserisci il numero di kilometri che vuoi fare")
-// );
+const userName = document.getElementById("user-name");
+const userKm = parseFloat(document.getElementById("user-km"));
+const userAge = parseInt(document.getElementById("user-age"));
+
+// DICHIARO I MIEI BOTTONI
+const buttonSend = document.getElementById("buttom-send");
+const buttonRemove = document.getElementById("button-remove");
+
+// DICHIARO I MIEI OUTPUT
+const ticketName = document.getElementById("ticket-name");
+const ticketPrice = document.getElementById("ticket-price");
+const ticketDiscount = document.getElementById("ticket-discount");
 
 // TARIFFARIO FISSO
 const priceKm = 0.21;
@@ -24,23 +32,15 @@ if (userAge < 18) {
 const finalPrice = priceTicket - discountTicket;
 
 // STAMPO A SCHERMO IL COSTO DEL BIGLIETTO
-document.getElementById("final-ticket-price").innerHTML =
-  "Il costo del biglietto è: €" + finalPrice.toFixed(2);
+const outputPrice = (document.getElementById("final-ticket-price").innerHTML =
+  "Il costo del biglietto è: €" + finalPrice.toFixed(2));
 
 // STAMPO A SCHERMO LO SCONTO DEL BIGLIETTO
-document.getElementById("ticket-discount").innerHTML =
-  "Il sconto del biglietto è: €" + discountTicket.toFixed(2);
+const outputDiscount = (document.getElementById("ticket-discount").innerHTML =
+  "Il sconto del biglietto è: €" + discountTicket.toFixed(2));
 
-// DICHIARO I MIEI INPUT
-const userName = document.getElementById("user-name");
-const userKm = document.getElementById("user-km");
-const userAge = document.getElementById("user-age");
-
-// DICHIARO I MIEI BOTTONI
-const sendText = document.getElementById("send-text");
-const removeText = document.getElementById("remove-text");
-
-// DICHIARO I MIEI OUTPUT
-const ticketName = document.getElementById("ticket-name");
-const ticketPrice = document.getElementById("ticket-price");
-const ticketDiscount = document.getElementById("ticket-discount");
+// COLLEGO IL INPUT NAME AL TICKET
+buttonSend.addEventListener("click", function () {
+  const inputName = userName.value;
+  ticketName.innerHTML = inputName;
+});
