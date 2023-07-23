@@ -1,5 +1,6 @@
 // RICHIESTE UTENTE
 const userName = document.getElementById("user-name");
+const userSurname = document.getElementById("user-surname");
 const userKm = document.getElementById("user-km");
 const userAge = document.getElementById("user-age");
 
@@ -9,14 +10,21 @@ const buttonRemove = document.getElementById("button-remove");
 
 // DICHIARO I MIEI OUTPUT
 const ticketName = document.getElementById("ticket-name");
+const ticketSurname = document.getElementById("ticket-surname");
 const ticketPrice = document.getElementById("ticket-price");
 const ticketDiscount = document.getElementById("ticket-discount");
 
 // COLLEGO L INPUT NAME AL TICKET
 buttonSend.addEventListener("click", function () {
+  // INPUT NAME
   const inputName = userName.value;
   ticketName.innerHTML = inputName;
   console.log(inputName);
+
+  // INPUT SURNAME
+  const inputSurname = userSurname.value;
+  ticketSurname.innerHTML = inputSurname;
+  console.log(inputSurname);
 
   const inputKm = userKm.value;
 
