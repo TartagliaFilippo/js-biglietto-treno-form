@@ -6,5 +6,104 @@
 }
 
 /* UTILS */
+h3 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 0;
+}
 
 /* STRUCTURE */
+/* INPUT */
+.first-title {
+  text-align: center;
+  color: blue;
+}
+
+.input-card {
+  margin: 50px 0;
+}
+
+.card-informations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-informations .list-group-item {
+  width: 50%;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* OUTPUT */
+.card-ticket {
+  background-color: whitesmoke;
+  margin: 50px 0;
+}
+
+.card-ticket .card-body {
+  height: 150px;
+  display: flex;
+}
+
+.col-4.container-informations {
+  display: flex;
+  align-items: center;
+}
+
+.col-4.container-informations > .col-10 {
+  height: 115px;
+}
+
+#user-informations {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fixed-informations {
+  background-color: white;
+}
+
+#carriage {
+  padding: 0 5px;
+  border-left: 1px solid rgb(172, 171, 171);
+  border-right: 1px solid rgb(172, 171, 171);
+}
+
+.container-informations:nth-child(1) > .col-2 {
+  color: red;
+}
+
+.container-informations:nth-child(2) > .col-2 {
+  color: white;
+}
+
+.container-informations:nth-child(3) > .col-2 {
+  color: green;
+}
+
+#fixed-informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-informations {
+  margin-bottom: 50px;
+}
+
+#price-informations {
+  background-color: green;
+}

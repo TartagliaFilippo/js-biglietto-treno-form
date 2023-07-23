@@ -1,4 +1,5 @@
 // RICHIESTE UTENTE
+const alertErrorElement = document.getElementById("error-element");
 const userName = document.getElementById("user-name");
 const userSurname = document.getElementById("user-surname");
 const userKm = document.getElementById("user-km");
@@ -9,9 +10,11 @@ const buttonSend = document.getElementById("buttom-send");
 const buttonRemove = document.getElementById("button-remove");
 
 // DICHIARO I MIEI OUTPUT
+const ticketSection = document.getElementById("ticket-section");
 const ticketName = document.getElementById("ticket-name");
 const ticketSurname = document.getElementById("ticket-surname");
 const ticketPrice = document.getElementById("ticket-price");
+const discontPrice = document.getElementById("discount-price-real");
 const ticketDiscount = document.getElementById("ticket-discount");
 
 // COLLEGO L INPUT NAME AL TICKET
@@ -30,6 +33,12 @@ buttonSend.addEventListener("click", function () {
 
   const inputAge = userAge.value;
 
+  if (isNaN(inputKm) || isNaN(inputAge) || !ticketName || !ticketSurname) {
+    alertErrorElement.classList.remove("d-none");
+  } else {
+    ticketSection.classList.remove("d-none");
+  }
+
   // TARIFFARIO FISSO
   const priceKm = 0.21;
 
@@ -46,14 +55,19 @@ buttonSend.addEventListener("click", function () {
     discountTicket = priceTicket * 0.4;
   }
 
+  // QUANDO MOSTRO LA VARIABIE DISCOUNT
+  if (discountTicket > 0) {
+    discontPrice.classList.remove("d-none");
+  }
+
   // DICHIARO IL PREZZO FINALE DEL BIGLIETTO
   const finalPrice = priceTicket - discountTicket;
   console.log(finalPrice);
 
   // STAMPO A SCHERMO IL COSTO DEL BIGLIETTO
   const outputPrice = (document.getElementById("final-ticket-price").innerHTML =
-    "Il costo del biglietto è: €" + finalPrice.toFixed(2));
+    "€" + finalPrice.toFixed(2));
   // STAMPO A SCHERMO LO SCONTO DEL BIGLIETTO
   const outputDiscount = (document.getElementById("ticket-discount").innerHTML =
-    "E' stato applicato uno sconto di: €" + discountTicket.toFixed(2));
+    "€" + discountTicket.toFixed(2));
 });
